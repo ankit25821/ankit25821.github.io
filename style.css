@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
 
 * {
     padding: 0px;
@@ -177,6 +178,7 @@ body {
     }
 }
 
+
 /* End Menu Icon */
 
 /* Nav */
@@ -305,6 +307,20 @@ body {
 
 /* End Section Blocks */
 
+/* Footer */
+footer{
+    width: 100%;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+footer span{
+    font-size: 20px;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+/* End Footer */
+
 /* Scroll Top */
 .scroll-top {
     position: fixed;
@@ -321,7 +337,6 @@ body {
     font-size: xx-large;
     transition: all .5s ease-in;
 }
-
 .scroll-top:hover {
     background-color: rgba(34, 34, 34, 0.912);
     color: #fff;
@@ -357,7 +372,7 @@ body {
     }
 
     .menu-icon {
-        position: absolute;
+        position: fixed;
         right: 0px;
         display: flex;
         width: 20px;
@@ -377,17 +392,55 @@ body {
         transition: all .3s;
         margin: 8% 0;
     }
+
+    .scroll-top {
+        height: 30px;
+        width: 30px;
+        right: 5%;
+        font-size: medium;
+        top: 85%;
+    }
+    .profile-pic{
+        height: 100px;
+        width: 100px;
+    }
+    .hero h4{
+        font-size: 20px;
+    }
+    .social-links{
+        padding: 0px;
+        margin-top: 20px;
+    }
+    .social-links a{
+        font-size: 20px;
+    }
+    .hero{
+        min-height: 300px;
+    }
+    .section-title{
+        padding: 10px 0px;
+        text-indent: 15px;
+        font-size: large;
+    }
+    .section-block{
+        padding: 10px;
+    }
+    .section-content{
+        margin: 5px;
+        font-weight: 300;
+    }
+
     @keyframes top {
         0% {
             top: 0px;
             transform: rotate(0deg);
         }
-    
+
         50% {
             top: 2px;
             transform: rotate(0deg);
         }
-    
+
         100% {
             top: 6px;
             transform: rotate(135deg);
@@ -399,12 +452,12 @@ body {
             bottom: 0px;
             transform: rotate(0deg);
         }
-    
+
         50% {
             bottom: 2px;
             transform: rotate(0deg);
         }
-    
+
         100% {
             bottom: 4px;
             transform: rotate(45deg);
@@ -431,7 +484,7 @@ body {
     }
 
     .menu-icon {
-        position: absolute;
+        position: fixed;
         right: 0px;
         display: flex;
     }

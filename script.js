@@ -4,21 +4,35 @@ const navContainer = document.getElementById('nav-container');
 
 // Screen Event Listener
 
-if(window.innerWidth <= 767){
+if (window.innerWidth <= 767) {
+    navContainer.addEventListener('click', function (event) {
+        event.stopPropagation();
+    })
+
+    menuIcon.addEventListener('click', function (event) {
+        event.stopPropagation();
+    })
+
+    document.body.addEventListener('click', function (event) {
+        navContainer.classList.add('nav-container-hidden');
+        navContainer.classList.remove('nav-container');
+        menuIcon.classList.remove('active');
+    })
+
     navContainer.classList.add('nav-container-hidden');
     navContainer.classList.remove('nav-container');
-}else{
+} else {
     navContainer.classList.remove('nav-container-hidden');
     navContainer.classList.add('nav-container');
 }
 
 
-window.addEventListener('resize', function(event) {
-    if(event.target.innerWidth <= 767){
+window.addEventListener('resize', function (event) {
+    if (event.target.innerWidth <= 767) {
         navContainer.classList.add('nav-container-hidden');
         navContainer.classList.remove('nav-container');
         menuIcon.classList.remove('active');
-    }else if (event.target.innerWidth > 767){
+    } else if (event.target.innerWidth > 767) {
         navContainer.classList.remove('nav-container-hidden');
         navContainer.classList.add('nav-container');
     }
@@ -30,7 +44,6 @@ menuIcon.addEventListener('click', function () {
     menuIcon.classList.toggle('active');
     navContainer.classList.toggle('nav-container');
     if (!menuIcon.classList.contains('active') & !navContainer.classList.contains('nav-container-hidden')) {
-        console.log("Don't Have Active Class")
         menuIcon.classList.toggle('not-active');
         navContainer.classList.toggle('nav-container-hidden');
     } else {
@@ -42,10 +55,19 @@ menuIcon.addEventListener('click', function () {
 // Scroll Top
 document.getElementById("scrollTop").style.display = "none";
 window.onscroll = function () {
+
     if (document.documentElement.scrollTop > 400) {
         document.getElementById("scrollTop").style.display = "block";
+        var span = menuIcon.querySelectorAll('span');
+        for (let i = 0; i < span.length; i++) {
+            span[i].style.background = "#000";
+        }
     } else {
         document.getElementById("scrollTop").style.display = "none";
+        var span = menuIcon.querySelectorAll('span');
+        for (let i = 0; i < span.length; i++) {
+            span[i].style.background = "#fff";
+        }
     }
 };
 
