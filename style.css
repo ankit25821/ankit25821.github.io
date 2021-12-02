@@ -284,7 +284,7 @@ body {
 /* Section Blocks */
 .section-block {
     padding: 20px;
-    word-break: break-all;
+    overflow-wrap: break-word;
     word-wrap: break-word;
 }
 
@@ -301,24 +301,46 @@ body {
 .section-content {
     margin: 5px 20px;
     letter-spacing: 2px;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 40px;
     font-weight: 400;
 }
 
 /* End Section Blocks */
 
+/* Cards */
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    color: #333;
+    padding: 1rem;
+    height: 4rem;
+}
+
+/* End Cards */
+
 /* Footer */
-footer{
+footer {
     width: 100%;
     background: #222;
     color: #fff;
     text-align: center;
     padding: 20px;
 }
-footer span{
+
+footer span {
     font-size: 20px;
     font-family: 'Fuzzy Bubbles', cursive;
 }
+
 /* End Footer */
 
 /* Scroll Top */
@@ -337,6 +359,7 @@ footer span{
     font-size: xx-large;
     transition: all .5s ease-in;
 }
+
 .scroll-top:hover {
     background-color: rgba(34, 34, 34, 0.912);
     color: #fff;
@@ -400,34 +423,44 @@ footer span{
         font-size: medium;
         top: 85%;
     }
-    .profile-pic{
+
+    .profile-pic {
         height: 100px;
         width: 100px;
     }
-    .hero h4{
+
+    .hero h4 {
         font-size: 20px;
     }
-    .social-links{
+
+    .social-links {
         padding: 0px;
         margin-top: 20px;
     }
-    .social-links a{
+
+    .social-links a {
         font-size: 20px;
     }
-    .hero{
+
+    .hero {
         min-height: 300px;
     }
-    .section-title{
+
+    .section-title {
         padding: 10px 0px;
         text-indent: 15px;
         font-size: large;
     }
-    .section-block{
+
+    .section-block {
         padding: 10px;
     }
-    .section-content{
+
+    .section-content {
         margin: 5px;
-        font-weight: 300;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
     }
 
     @keyframes top {
@@ -492,15 +525,31 @@ footer span{
     .menu-icon span {
         background: #fff;
     }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
 
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
 
 /* Media Query for Large screens */
-@media (min-width: 1281px) {}
+@media (min-width: 1281px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
 
 /* End Media Queries */
