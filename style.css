@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
-
 * {
     padding: 0px;
     margin: 0px;
@@ -341,21 +340,27 @@ body {
     align-items: start;
     justify-content: center;
 }
-.cards-sm .card{
+
+.cards-sm .card {
     text-align: center;
+    height: 150px;
 }
 
-.cards-sm .card .title{
+.cards-sm .card .title {
     font-size: 13px;
     color: #666666;
 }
 
-.skills-header{
+.skills-header {
     text-align: center;
-    margin: 20px;
+    background-color: #666666;
+    color: #fff;
+    font-weight: 400;
+    margin: 50px 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.skills-body img{
+.skills-body img {
     width: 80px;
     height: 100%;
     object-fit: cover;
@@ -373,26 +378,28 @@ body {
     transition: all .3s ease-in;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transition: all .3s ease-out;
 }
 
-.card-body{
+.card-body {
     height: auto;
     font-size: small;
     overflow-wrap: break-word;
     word-wrap: break-word;
     padding: 10px;
 }
-.card-body img{
+
+.card-body img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
 }
-.card-list{
+
+.card-list {
     padding: 10px 10px 10px 20px;
 }
 
@@ -456,7 +463,8 @@ footer span {
     .logo {
         font-size: medium;
     }
-    .logo-img{
+
+    .logo-img {
         height: 30px;
         width: 30px;
         margin-right: -12px;
@@ -539,10 +547,12 @@ footer span {
         line-height: 30px;
         font-weight: 400;
     }
-    .cards-sm{
+
+    .cards-sm {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-    .card:hover{
+
+    .card:hover {
         transform: scale(1.0);
     }
 
@@ -613,13 +623,16 @@ footer span {
         text-align: center;
         text-indent: 0px;
     }
-    .logo-img{
+
+    .logo-img {
         margin-right: -16px;
     }
-    .cards-sm{
+
+    .cards-sm {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .card:hover{
+
+    .card:hover {
         transform: scale(1.0);
     }
 }
