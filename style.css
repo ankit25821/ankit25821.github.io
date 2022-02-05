@@ -45,7 +45,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     margin: 15px;
-    z-index: 9;
+    z-index: 2;
     display: none;
 }
 
@@ -192,6 +192,9 @@ body {
     min-height: 70px;
     box-shadow: 0px 2px 5px rgba(56, 71, 78, 0.699);
     transition: all .5s ease-out;
+    width: -webkit-fill-available;
+    width: 100%;
+    z-index: 9;
 }
 
 .nav-container-hidden {
@@ -323,7 +326,7 @@ body {
 
 /* Cards */
 .cards {
-    max-width: 1200px;
+    max-width: 2518px;
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
@@ -332,18 +335,19 @@ body {
 }
 
 .cards-sm {
-    max-width: 1200px;
+    max-width: 2518px;
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    align-items: start;
+    align-items: center;
     justify-content: center;
 }
 
 .cards-sm .card {
     text-align: center;
     height: 150px;
+    min-height: 200px;
 }
 
 .cards-sm .card .title {
@@ -353,11 +357,15 @@ body {
 
 .skills-header {
     text-align: center;
-    background-color: #666666;
-    color: #fff;
+    color: #666666;
     font-weight: 400;
+    font-size: 2rem;
     margin: 50px 20px;
     font-family: 'Poppins', sans-serif;
+}
+
+.skills-body{
+    margin: 20px 0px;
 }
 
 .skills-body img {
@@ -412,6 +420,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+    margin-top: 50px;
 }
 
 footer span {
@@ -457,7 +466,7 @@ footer span {
         position: fixed;
         height: 100vh;
         text-align: center;
-        min-width: 200px;
+        min-width: 250px;
     }
 
     .logo {
@@ -486,7 +495,7 @@ footer span {
         height: 20px;
         cursor: pointer;
         margin: 20px;
-        z-index: 9;
+        z-index: 2;
     }
 
     .menu-icon span {
@@ -638,12 +647,58 @@ footer span {
 }
 
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-container{
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+    .logo{
+        font-size: larger;
+    }
+    .hero{
+        height: 550px !important;
+    }
+    .card-list li{
+        font-size: 1.2rem;
+    }
+    .cards-sm .card .title{
+        font-size: 1.5rem;
+    }
+    .section-content{
+        font-size: 1.7rem;
+    }
+    footer span{
+        font-size: 1.5rem;
+    }
+}
 
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {}
 
 /* Media Query for Large screens */
-@media (min-width: 1281px) {}
+@media (min-width: 1781px) {
+    .nav-container{
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    .logo{
+        font-size: larger;
+    }
+    .hero{
+        height: 550px !important;
+    }
+    .card-list li{
+        font-size: 1.2rem;
+    }
+    .cards-sm .card .title{
+        font-size: 1.5rem;
+    }
+    .section-content{
+        font-size: 1.7rem;
+    }
+    footer span{
+        font-size: 1.5rem;
+    }
+}
 
 /* End Media Queries */

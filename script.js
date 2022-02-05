@@ -57,6 +57,7 @@ document.getElementById("scrollTop").style.display = "none";
 window.onscroll = function () {
 
     if (document.documentElement.scrollTop > 400) {
+        navContainer.style.position = "fixed";
         document.getElementById("scrollTop").style.display = "block";
         var span = menuIcon.querySelectorAll('span');
         for (let i = 0; i < span.length; i++) {
@@ -68,6 +69,7 @@ window.onscroll = function () {
         for (let i = 0; i < span.length; i++) {
             span[i].style.background = "#fff";
         }
+        navContainer.style.position = "static";
     }
 };
 
