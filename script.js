@@ -57,22 +57,27 @@ document.getElementById("scrollTop").style.display = "none";
 window.onscroll = function () {
 
     if (document.documentElement.scrollTop > 400) {
-        navContainer.style.position = "fixed";
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        if(document.documentElement.scrollTop > 200 && width > 767){
+            navContainer.style.position = "fixed";
+        }else if(document.documentElement.scrollTop < 200 && width > 767){
+            navContainer.style.position = "static";
+        }
         document.getElementById("scrollTop").style.display = "block";
         var span = menuIcon.querySelectorAll('span');
         for (let i = 0; i < span.length; i++) {
-            span[i].style.background = "#000";
+            span[i].style.background = "#06d9ef";
         }
     } else {
         document.getElementById("scrollTop").style.display = "none";
         var span = menuIcon.querySelectorAll('span');
         for (let i = 0; i < span.length; i++) {
-            span[i].style.background = "#fff";
+            span[i].style.background = "#06d9ef";
         }
-        navContainer.style.position = "static";
     }
 };
 
 function goTop() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
+

@@ -217,7 +217,7 @@ body {
     font-size: large;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     font-weight: 600;
     letter-spacing: 2px;
@@ -476,7 +476,7 @@ footer span {
     .logo-img {
         height: 30px;
         width: 30px;
-        margin-right: -12px;
+        /* margin-right: -12px; */
     }
 
     .nav-container:hover {
@@ -495,7 +495,7 @@ footer span {
         height: 20px;
         cursor: pointer;
         margin: 20px;
-        z-index: 2;
+        z-index: 99;
     }
 
     .menu-icon span {
@@ -622,6 +622,7 @@ footer span {
         position: fixed;
         right: 0px;
         display: flex;
+        z-index: 99;
     }
 
     .menu-icon span {
@@ -632,10 +633,10 @@ footer span {
         text-align: center;
         text-indent: 0px;
     }
-
-    .logo-img {
-        margin-right: -16px;
+    .logo{
+        font-size: xx-large;
     }
+
 
     .cards-sm {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -669,6 +670,9 @@ footer span {
     }
     footer span{
         font-size: 1.5rem;
+    }
+    .menu-icon{
+        z-index: 999;
     }
 }
 
